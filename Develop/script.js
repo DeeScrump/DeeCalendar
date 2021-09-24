@@ -1,10 +1,23 @@
-var timeDisplayEl = $('#currentDay');
+var dayDisplayEl = $('#currentDay');
+var hourNineEl = $('#nineAM');
+var currentHour = moment().format('hA');
+
+var saveBtn = $('#saveIconTen');
 
 
 //code to display time under jumbotron
-function timeDisplay() {
-    var currentTime = moment().format('dddd, MMMM Do');
-    timeDisplayEl.text(currentTime);
+function dayDisplay() {
+    var currentDay = moment().format('dddd, MMMM Do');
+    dayDisplayEl.text(currentDay);
 }
+setInterval(dayDisplay, 1000);
 
-setInterval(timeDisplay, 1000);
+// function hourDisplay() {
+console.log(currentHour);
+// }
+// setInterval(hourDisplay);
+
+
+// if (dayDisplayEl == '5PM') {
+
+// }

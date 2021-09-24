@@ -69,3 +69,29 @@ textarea {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
 }
+
+td {
+  display: block;
+  padding: none;
+  margin: none;
+  border: none;
+  width: 100%;
+  height: 100%;
+}
+
+table td {
+  position: relative;
+}
+
+table td input {
+  position: absolute;
+  display: block;
+  top:0;
+  left:0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  border: none;
+  padding: 10px;
+  box-sizing: border-box;
+}
