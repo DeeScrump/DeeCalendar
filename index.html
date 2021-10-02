@@ -18,7 +18,7 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./Assets/css/index.css" />
     <title>Work Day Scheduler</title>
   </head>
 
@@ -30,9 +30,17 @@
     </header>
     <div class="container">
       <!-- Timeblocks go here -->
+        <div id="nineAM" class="row time-block">
+          <div class="hour">9AM</div>
+          <textarea class="textarea description"></textarea>
+          <button type="button" class="btn saveBtn"><img src="./Assets/savedisk.png"></button>
+        </div>
     </div>
+
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./Assets/js/index.js"></script>
   </body>
 </html>

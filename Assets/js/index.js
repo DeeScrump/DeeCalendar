@@ -1,61 +1,61 @@
-// var dayDisplayEl = $('#currentDay');
-// var hourNineEl = $('#nineAM');
-// var currentHour = moment().format('hA');
-// var apptNineEl = $('#apptInfoNine');
-// var apptTenEl = $('#apptInfoTen');
+var dayDisplayEl = $('#currentDay');
+var hourNineEl = $('#nineAM');
+var currentHour = moment().format('hA');
+var apptNineEl = $('#apptInfoNine');
+var apptTenEl = $('#apptInfoTen');
 
-// var saveBtn = $('#saveIconTen');
+var saveBtn = $('#saveIconTen');
 
 
-// //code to display time under jumbotron
-// function dayDisplay() {
-//     var currentDay = moment().format('dddd, MMMM Do');
-//     dayDisplayEl.text(currentDay);
+//code to display time under jumbotron
+function dayDisplay() {
+    var currentDay = moment().format('dddd, MMMM Do');
+    dayDisplayEl.text(currentDay);
+}
+setInterval(dayDisplay, 1000);
+
+// function hourDisplay() {
+console.log(currentHour);
 // }
-// setInterval(dayDisplay, 1000);
-
-// // function hourDisplay() {
-// console.log(currentHour);
-// // }
-// // setInterval(hourDisplay);
+// setInterval(hourDisplay);
 
 
-// // if (dayDisplayEl == '5PM') {
+// if (dayDisplayEl == '5PM') {
 
-// // }
+// }
 
-// // function handleFormSubmit(event) {
-// //     // Prevent the default behavior
-// //     event.preventDefault();
+// function handleFormSubmit(event) {
+//     // Prevent the default behavior
+//     event.preventDefault();
   
-// //     console.log('First Name:', firstNameEl.val());
-// //     console.log('Last Name:', lastNameEl.val());
-// //     localStorage.setItem(apptNineEl)
+//     console.log('First Name:', firstNameEl.val());
+//     console.log('Last Name:', lastNameEl.val());
+//     localStorage.setItem(apptNineEl)
   
-// //     // Select all checked options
-// //     var checkedEl = $('input:checked');
-// //     var selected = [];
+//     // Select all checked options
+//     var checkedEl = $('input:checked');
+//     var selected = [];
   
-// //     // Loop through checked options to store in array
-// //     $.each(checkedEl, function () {
-// //       selected.push($(this).val());
-// //     });
-// //     console.log('Toppings: ', selected.join(', '));
+//     // Loop through checked options to store in array
+//     $.each(checkedEl, function () {
+//       selected.push($(this).val());
+//     });
+//     console.log('Toppings: ', selected.join(', '));
   
-// //     // Clear input fields
-// //     $('input[type="text"]').val('');
-// //     $('input[type="email"]').val('');
-// //     $('input[type="checkbox"]').prop('checked', false);
-// //   }
+//     // Clear input fields
+//     $('input[type="text"]').val('');
+//     $('input[type="email"]').val('');
+//     $('input[type="checkbox"]').prop('checked', false);
+//   }
   
-// //   // Submit event on the form
-// //   formEl.on('submit', handleFormSubmit);
+//   // Submit event on the form
+//   formEl.on('submit', handleFormSubmit);
 
-//   var disableInputs = function() {
-//     sessionStorage.disableInputs = 'true';
-//     document.$('firstname').disabled = true;
-//     document.$('lastname').disabled = true;
+  var disableInputs = function() {
+    sessionStorage.disableInputs = 'true';
+    document.$('firstname').disabled = true;
+    document.$('lastname').disabled = true;
 
-//   };
-//   if (sessionStorage.disableInputs === 'true') disableInputs();
-//   document.$('saveBtn').onclick = disableInputs;
+  };
+  if (sessionStorage.disableInputs === 'true') disableInputs();
+  document.$('saveBtn').onclick = disableInputs;

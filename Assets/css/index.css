@@ -70,7 +70,14 @@ textarea {
   transition: all 0.3s ease-in-out;
 }
 
-td {
+img {
+  height: 30px;
+  width: 30px;
+}
+
+
+
+/* td {
   display: block;
   padding: none;
   margin: none;
@@ -94,4 +101,4 @@ table td input {
   border: none;
   padding: 10px;
   box-sizing: border-box;
-}
+} */
