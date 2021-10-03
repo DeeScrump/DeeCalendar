@@ -55,14 +55,13 @@ function showHide () {
 }
 
 // On button clicks, saves to local storage and confirms appointment saved
-// function apptSchedShowConfirm() {
   $('.btn').click(showHide);
   $('.btn').click(saveLocalStorage);
 
 
 // Saves the data entry in textarea to local storage
 function saveLocalStorage() {
-  var apptDeets = $(this).siblings('.textarea').val();
+  var apptDeets = $(this).siblings('textarea').val();
   var apptTime =  $(this).parent().attr('id');
   localStorage.setItem(apptTime, apptDeets);
   console.log(apptDeets);
