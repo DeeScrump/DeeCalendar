@@ -24,6 +24,6 @@ User will observe a color scheme denoting differences between passed time, prese
 
 # Associated Links for Assignment
 
-1. Github Repository:   
+1. Github Repository:   https://github.com/DeeScrump/DeeCalendar.git
 
-2. Deployed Live Site:  
+2. Deployed Live Site:  https://deescrump.github.io/DeeCalendar/
