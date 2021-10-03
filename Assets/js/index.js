@@ -20,12 +20,7 @@ function dayDisplay() {
 }
 setInterval(dayDisplay, 1000);
 
-// function pastHourDisplay() {
-  console.log(currentHour);
-  console.log(timeTable);
-
-
-
+// Comares current hour with hour on schedule to determine past, present, future
 $('.time-block').each(function(i) {
   if (timeTable[i] < currentHour) {
     $(this).addClass('past');
@@ -39,10 +34,24 @@ $('.time-block').each(function(i) {
   }
 });
 
+$('#confirmSave').show();
 
-  // if (currentHour > moment().hourTwelveEl) {
-  //   console.log(hourNineEl + " is earlier in the day than " + currentHour);
-  // } else {
-  //   console.log('You are crazy!');
-  // }
+// Show then hide the saved confirmation
+function showHide () {
+  $('#confirmSave').css('visibility', 'visible');
+  setTimeout(function () {
+    $('#confirmSave').css('visibility', 'hidden');
+  }, 10000);
+}
+
+
+$('.btn').click(showHide);
+
+
+
+// function saveAppt() {
+//   $('btn').on('click', function () {
+
+//   })
+// }
 
