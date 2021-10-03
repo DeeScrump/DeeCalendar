@@ -12,15 +12,27 @@ var hourFourEl = moment($('#fourPM .hour').text(), ['hA']).format('HH');
 var hourFiveEl = moment($('#fivePM .hour').text(), ['hA']).format('HH');
 var timeTable = [hourNineEl, hourTenEl, hourElevenEl, hourTwelveEl, hourOneEl, hourTwoEl, hourThreeEl, hourFourEl, hourFiveEl];
 
+var timeSlot = [nineAM, tenAM, elevenAM, twelvePM, onePM, twoPM, threePM, fourPM, fivePM];
 
-//code to display time under jumbotron
+$('#nineAM .textarea').val(localStorage.getItem('nineAM'));
+$('#tenAM .textarea').val(localStorage.getItem('tenAM'));
+$('#elevenAM .textarea').val(localStorage.getItem('elevenAM'));
+$('#twelvePM .textarea').val(localStorage.getItem('twelvePM'));
+$('#onePM .textarea').val(localStorage.getItem('onePM'));
+$('#twoPM .textarea').val(localStorage.getItem('twoPM'));
+$('#threePM .textarea').val(localStorage.getItem('threePM'));
+$('#fourPM .textarea').val(localStorage.getItem('fourPM'));
+$('#fivePM .textarea').val(localStorage.getItem('fivePM'));
+
+
+//Code to display time under jumbotron
 function dayDisplay() {
     var currentDay = moment().format('dddd, MMMM Do');
     dayDisplayEl.text(currentDay);
 }
 setInterval(dayDisplay, 1000);
 
-// Comares current hour with hour on schedule to determine past, present, future
+// Compares current hour with hour on schedule to determine past, present, future
 $('.time-block').each(function(i) {
   if (timeTable[i] < currentHour) {
     $(this).addClass('past');
@@ -34,24 +46,28 @@ $('.time-block').each(function(i) {
   }
 });
 
-$('#confirmSave').show();
-
-// Show then hide the saved confirmation
+// Shows then hides the saved confirmation
 function showHide () {
   $('#confirmSave').css('visibility', 'visible');
   setTimeout(function () {
     $('#confirmSave').css('visibility', 'hidden');
-  }, 10000);
+  }, 3000);
 }
 
+// On button clicks, saves to local storage and confirms appointment saved
+// function apptSchedShowConfirm() {
+  $('.btn').click(showHide);
+  $('.btn').click(saveLocalStorage);
 
-$('.btn').click(showHide);
 
+// Saves the data entry in textarea to local storage
+function saveLocalStorage() {
+  var apptDeets = $(this).siblings('.textarea').val();
+  var apptTime =  $(this).parent().attr('id');
+  localStorage.setItem(apptTime, apptDeets);
+  console.log(apptDeets);
+  console.log(apptTime);
+}
+ 
 
-
-// function saveAppt() {
-//   $('btn').on('click', function () {
-
-//   })
-// }
 
