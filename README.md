@@ -21,6 +21,8 @@ User will observe a color scheme denoting differences between passed time, prese
 
 ![A user clicks on slots on the color-coded calendar and edits the events.](./assets/appscreensaver.png)
 
+![A view with data saved and different day and timechange.](./assets/appscreensaver2.png)
+
 
 # Associated Links for Assignment
 
